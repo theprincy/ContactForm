@@ -1,8 +1,6 @@
 <?php 
 /*
 *
-* this code is based on captcha code by Simon Jarvis 
-* http://www.white-hat-web-design.co.uk/articles/php-captcha.php
 *
 * This program is free software; you can redistribute it and/or 
 * modify it under the terms of the GNU General Public License 
@@ -47,13 +45,14 @@ $image = @imagecreate($image_width, $image_height);
 /* setting the background, text and noise colours here */
 $background_color = imagecolorallocate($image, 255, 255, 255);
 
+$arr_noice_color = hexrgb($captcha_noice_color);
+$image_noise_color = imagecolorallocate($image, $arr_noice_color['red'], 
+		$arr_noice_color['green'], $arr_noice_color['blue']);
+
 $arr_text_color = hexrgb($captcha_text_color);
 $text_color = imagecolorallocate($image, $arr_text_color['red'], 
 		$arr_text_color['green'], $arr_text_color['blue']);
 
-$arr_noice_color = hexrgb($captcha_noice_color);
-$image_noise_color = imagecolorallocate($image, $arr_noice_color['red'], 
-		$arr_noice_color['green'], $arr_noice_color['blue']);
 
 
 /* generating the dots randomly in background */
