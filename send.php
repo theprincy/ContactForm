@@ -1,47 +1,5 @@
 <?php
-/*
-Run out of box PHP contact us script 
 
-Introduction
-------------
-Run out of box PHP contact us script, It does not need modification, it will detect the domain and send email containing the contact message to info@yourdomain
-Whatever fields in your form it will be detected and be send with email
-
-Background
-----------
-Lots of contact us scripts are available over the internet. to use any other script the modification of the PHP file is needed. 
-This script is very useful to who do not know PHP and to the beginner of PHP
-
-Using the code
---------------
-Upload the script folder to your www root directory 
-
-From Action
------------
-<form action="contact2us/send.php" method="POST">
-
-Fields Names
-------------
-Use from_email, from_name, subject, message and captcha as main fields' names in your form.
-
-Captcha
--------
-If you don't wish to use captcha then no change is needed and the 1st line of code will be:
-$captcha = false;
-If you wish to use captcha then change the 1st line of code to be:
-$captcha = true;
-to use captcha include the following in your form
-<img src="contact2us/captcha_code_file.php?rand=<?php echo rand(); ?>" id='captchaimg' ><br>
-Enter the above text: <input id="captcha" name="captcha" type="text"><br>
-
-Thank you url
--------------
-Put your own $thank_you_url in the 2nd line of the code.
-
-Download
---------
-http://www.codeproject.com/Articles/NewPast#Article
-*/
 $captcha = false;
 $thank_you_url = "../index.html#grazie";
 
